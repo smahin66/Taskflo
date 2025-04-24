@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-lg bg-white/80 dark:bg-dark-800;
+  }
+
+  .glass-card {
+    @apply bg-white/90 dark:bg-dark-800 backdrop-blur-lg border border-white/20 dark:border-dark-700/50;
+  }
+
+  .glow-effect {
+    @apply animate-glow;
+  }
+
+  .gradient-border {
+    @apply relative before:absolute before:inset-0 before:-z-10 before:p-[1px] before:bg-gradient-to-r before:from-primary-500/50 before:to-primary-700/50 before:rounded-[inherit] before:content-[''];
+  }
+}

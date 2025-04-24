@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "TaskFlow Blocker",
+  "version": "1.0.0",
+  "description": "Block distracting websites and applications during tasks",
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
