@@ -10,3 +10,9 @@ if (!supabaseUrl || !supabaseKey) {
 }
 
 export const supabase = createClient(supabaseUrl, supabaseKey);
+
+// 👇 Ajoute ceci pour exposer supabase dans la console navigateur
+if (typeof window !== 'undefined') {
+  // @ts-ignore
+  window.supabase = supabase;
+}
